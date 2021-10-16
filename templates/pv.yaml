@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Values.Name }}-pv
+spec:
+  storageClassName: evercurious-storageclass
+  capacity:
+    storage: {{ .Values.storagesize }}
+  accessModes:
+    - ReadWriteOnce
+  claimRef:
+    namespace: default
+    name: {{ .Values.Name }}-pv-claim
+  gcePersistentDisk:
+    pdName: {{ .Values.Name }}-pv-disk
+    fsType: ext4

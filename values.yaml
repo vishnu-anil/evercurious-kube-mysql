@@ -1,0 +1,11 @@
+# Default values for kube-mysql.
+#Name of the deployment, labels and service
+Name: ecmysql 
+#Disk size for the storage you create in cloud
+storagesize: 5Gi
+#Storage you would claim for the DB server
+storageclaim: 2Gi
+#Mysql docker image version. 
+image: 5.7
+#Base64 encoded password for your DB server. Change this to your desired one. Below one defaults to myrootpassword
+dbsecret: bXlyb290cGFzc3dvcmQ=
