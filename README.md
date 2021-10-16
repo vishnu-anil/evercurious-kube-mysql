@@ -1,7 +1,7 @@
 ## evercurious-kube-mysql
 Create a Mysql server in GCP kubernetes cluster
 
-##Prerequisites
+## Prerequisites
 * A valid GCP Account
 * A disk of size more than your Storagesize. This can be created with below command. Remember to use "Name" for the disk same as Name in the values.yaml
 
@@ -19,7 +19,7 @@ gcloud beta compute disks create <Name>-pv-disk --project=<Your-projct> --type=p
 | image | Mysql version you want to install| 5.7 |
 
 
-##Installation
+## Installation
 ```
 helm install kube-mysql ./ -f values.yaml
 ```
